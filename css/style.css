@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Lato:wght@300;400;700;900&family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    background-color: #2d3a3b;
+    color: #fff;
+    overflow-x: hidden;
+    min-height: 150vh;
+    background: url('/images/cyber.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+nav {
+    background-color: #222222;
+    padding-left: 70px;
+}
+
+.navbar-brand {
+    font-family: "Clicker Script", cursive;
+    font-size: 34px;
+}
+
+.carousel3d-container {
+    perspective: 1200px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel3d {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.carousel3d-item {
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    left: 100px;
+    top: 25px;
+    transition: transform 1s, opacity 1s;
+}
+
+.carousel3d-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.anime-button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    color: #fff;
+    background: linear-gradient(145deg, #ff4ecb, #845ec2);
+    border: 3px solid #fff;
+    padding: 15px 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #ff4ecb, 0 0 30px #845ec2;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.anime-button:hover {
+    background: linear-gradient(145deg, #845ec2, #ff4ecb);
+    box-shadow: 0 0 20px #fff, 0 0 40px #ff4ecb;
+    transform: scale(1.05);
+}
+
+.container {
+    padding: 50px 20px;
+}
+
+.text-muted {
+    color: #AAAAAA;
+}
+
+.card {
+    background-color: #1A1A1A;
+    border: 2px solid #00FFFF;
+    box-shadow: 0 0 10px #00FFFF;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #FF00FF;
+}
+
+.card-title {
+    color: #FFFF00;
+    font-size: 1em;
+    margin-bottom: 10px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.card-text {
+    color: #00FF00;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #FF00FF;
+    border: none;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    box-shadow: 0 0 10px #FF00FF;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #00FFFF;
+    box-shadow: 0 0 20px #00FFFF;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.col-md-4 {
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+
+@media (max-width: 768px) {
+    .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

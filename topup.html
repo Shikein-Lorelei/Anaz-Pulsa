@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anaz Pulsa | Top-Up Pulsa</title>
+  <link rel="stylesheet" href="css/topup.css" />
+  <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+</head>
+<body>
+  <div class="container">
+    <h2>Top-Up Pulsa</h2>
+    <form id="topupForm">
+      <label for="phone"> Nomor Telepon:</label>
+      <input type="tel" id="phone" name="phone" placeholder="08xxxxxxxxxx" required oninvalid="this.setCustomValidity('Mohon masukkan nomor telepon Anda')"
+      oninput="this.setCustomValidity('')"/>
+
+      <label for="amount">Nominal Pulsa:</label>
+      <select id="amount" name="amount" required>
+        <option value="" disabled selected>Pilih nominal</option>
+        <option value="5000">Rp5.000</option>
+        <option value="10000">Rp10.000</option>
+        <option value="20000">Rp20.000</option>
+        <option value="50000">Rp50.000</option>
+        <option value="100000">Rp100.000</option>
+        <option value="Paket Sigma">Paket Sigma</option>
+        <option value="Paket Sigma + Aura">Paket Sigma + Aura</option>
+        <option value="Paket Sigma + Aura 1000%">Paket Sigma + Aura 1000%</option>
+      </select>
+
+      <button type="submit">Pesan via WhatsApp</button>
+    </form>
+  </div>
+<script>
+  // Ambil parameter dari URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const paket = urlParams.get('paket');
+
+  // Jika ada parameter paket, otomatis pilih di dropdown
+  if (paket) {
+    const select = document.getElementById('amount');
+    for (let i = 0; i < select.options.length; i++) {
+      if (select.options[i].value === paket) {
+        select.selectedIndex = i;
+        break;
+      }
+    }
+  }
+</script>
+
+  <script src="js/topup.js"></script>
+</body>
+</html>
